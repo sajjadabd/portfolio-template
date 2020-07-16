@@ -1,0 +1,175 @@
+:root {
+    --navHeight : 2vh;
+}
+
+@font-face {
+    font-family : UbuntoBold;
+    src : url(./fonts/Ubuntu/Ubuntu-Bold.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: UbuntoBold;
+    margin : 0;
+    height : 100vh;
+    /* overflow-x : hidden; */
+    display : grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-areas : 'aside article';
+    box-sizing: border-box;
+    position : relative;
+}
+
+
+
+/* nav {
+    width : 100%;
+    height : var(--navHeight);
+    border : 1px solid black;
+    color : white;
+    grid-area : nav;
+} */
+
+aside {
+    /* border : 3px solid red; */
+    height : 500vh;
+}
+
+div.aside {
+    height : 100vh;
+    padding : 2em 1em;
+    /* border : 3px solid black; */
+    /* background-color : cyan; */
+    grid-area : aside;
+    display : flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items : center;
+    box-sizing: border-box;
+    position : sticky;
+    top : 0;
+}
+
+
+
+
+div.aside div.title {
+    text-align : center;
+    margin-top : 1em;
+    width : 100%;
+    font-size : 1.3em;
+}
+
+
+
+div.aside div.photo {
+    width : 180px;
+    height : 180px;
+    background : url(./img/sjabd.jpg);
+    background-size : cover;
+    border-radius : 50%;
+}
+
+div.aside div.menu {
+    display : flex;
+    font-size : 1.5em;
+    flex-direction : column;
+    justify-content: center;
+    align-items : center;
+}
+
+div.menu ul {
+    list-style-type: none;
+    padding : 0;
+    margin : 0;
+    display: flex;
+    flex-direction : column;
+}
+
+div.menu ul li {
+    display: flex;
+    justify-content: center;
+}
+
+div.menu ul li a {
+    padding : 4px 10px;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    display : block;
+    float : left;
+    text-align : center;
+}
+
+div.menu ul li a::after {
+    content: '';
+    display : block;
+	margin : auto;
+    width : 0%;
+    height : 2px;
+    background-color: black;
+    transition : .5s;
+    transform-origin: center;
+}
+
+div.menu ul li a:hover::after {
+    width : 100%;
+}
+
+article {
+    height : 100vh;
+    width : 100%;
+    grid-area : article;
+    /* border : 1px solid black; */
+    box-sizing: border-box;
+}
+
+
+
+article div.part {
+    width : 100%;
+    border : 2px solid black;
+    box-sizing: border-box;
+    /* background-color: mediumaquamarine; */
+    height : 100vh;
+}
+
+
+div.part {
+    display : flex;
+    flex-direction: column;
+    justify-content : flex-start;
+    align-items : flex-start;
+}
+
+
+div.titr {
+    padding : 1em;
+    font-size : 3em;
+}
+
+
+div.context {
+    border : 2px solid red;
+    width : calc(100% - 40px);
+    height : 40%;
+    margin : 0 auto;
+}
+
+
+
+@media only screen and (max-width : 800px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas : 'aside'
+                              'article';
+    }
+
+    aside {
+        height : 100vh;
+    }
+}
