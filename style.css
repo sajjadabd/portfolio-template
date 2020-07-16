@@ -3,7 +3,7 @@
 }
 
 @font-face {
-    font-family : UbuntoBold;
+    font-family : UbuntuBold;
     src : url(./fonts/Ubuntu/Ubuntu-Bold.ttf);
 }
 
@@ -13,13 +13,14 @@ html {
 
 
 body {
-    font-family: UbuntoBold;
+    font-family: UbuntuBold;
     margin : 0;
     height : 100vh;
     /* overflow-x : hidden; */
     display : grid;
     grid-template-columns: 2fr 5fr;
-    grid-template-areas : 'aside article';
+    grid-template-areas : 'aside article'
+                          'footer footer';
     box-sizing: border-box;
     position : relative;
 }
@@ -36,7 +37,8 @@ body {
 
 aside {
     /* border : 3px solid red; */
-    height : 530vh;
+    height : 720vh;
+    /* border-right : 5px solid black; */
 }
 
 div.aside {
@@ -138,7 +140,7 @@ article {
 
 article div.part {
     width : 100%;
-    border : 2px solid black;
+    /* border : 2px solid black; */
     box-sizing: border-box;
     /* background-color: mediumaquamarine; */
     min-height : 100vh;
@@ -150,17 +152,20 @@ div.part {
     flex-direction: column;
     justify-content : flex-start;
     align-items : flex-start;
+    padding-bottom : 18em;
 }
 
 
 div.titr {
     padding : 1em;
     font-size : 3em;
+    border-bottom : 5px solid red;
+    margin-bottom: 1em;
 }
 
 
 div.context {
-    border : 2px solid red;
+    /* border : 2px solid red; */
     width : calc(100% - 40px);
     height : 40%;
     margin : 0 auto;
@@ -192,33 +197,71 @@ a:active {
 div.skill div.bar {
     margin-top : 5px;
     width : 20vw;
-    height : 15px;
+    height : 10px;
     background-color : rgba(128, 128, 128, 0.5);
 }
 
 
 div.skill div.bar div.percent {
     width : 0;
-    height : 15px;
+    height : 10px;
     background-color: dodgerblue;
     transition : 1s;
 }
 
-#Skills div.context {
+
+div.barContainer {
+	display : flex;
+	flex-direction : row;
+}
+
+div.barContainer div.percentContainer {
+	margin : 0;
+	padding : 0;
+	padding-left : 0.5em;
+	font-size : 0.7em;
+	align-self : center;
+}
+
+#About div.context {
+    font-size : 1.5em;
+}
+
+#About code {
+    background-color : red;
+    color : white;
+    border-radius: 10px;
+    padding : 1px 4px;
+    font-family: UbuntuBold;
+}
+
+#About ul li {
+    margin : 10px;
+    line-height : 1.6em;
+}
+
+#Skills div.mySkills {
     display : grid;
     grid-template-columns : 1fr 1fr;
     grid-template-rows: auto;
-    font-size : 1.7em;
+    font-size : 1.2em;
 }
 
 
-#Skills div.context div.skill {
-    border : 1px solid black;
+#Skills div.mySkills div.skill {
+    /* border : 1px solid black; */
     padding : 1em;
     box-sizing: border-box;
 }
 
+#Skills div.subtitr {
+	font-size : 1.4em;
+    padding : 0.5em;
+    background-color: crimson;
+}
+
 #Contact div.context {
+    margin-top : 1em;
     display : grid;
     grid-template-columns : 1fr;
     font-size : 1.7em;
@@ -231,13 +274,26 @@ div.skill div.bar div.percent {
 }
 
 #Contact div.context div * {
-    border : 1px solid black;
+    /* border : 1px solid black; */
     display : flex;
     justify-content: center;
     align-items : center;
     padding : 1em;
 }
 
+
+footer {
+    grid-area : footer;
+    height : 50vh;
+    /* background-color: black; */
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+footer div {
+    /* background-color: cyan; */
+    border : 1px solid black;
+}
 
 @media only screen and (max-width : 900px) {
     body {
@@ -248,6 +304,7 @@ div.skill div.bar div.percent {
 
     aside {
         height : 100vh;
+        border : none;
     }
 
 
@@ -264,6 +321,10 @@ div.skill div.bar div.percent {
     div.context div {
         font-size : 0.8em;
     }
+	
+	#Skills div.mySkills {
+		font-size : 2em;
+	}
 }
 
 
@@ -281,7 +342,16 @@ div.skill div.bar div.percent {
         font-size : 0.7em;
     }
 
+
     div.skill div.bar,div.skill div.bar div.percent {
         height : 5px;
     }
+	
+		
+	#Skills div.mySkills {
+		font-size : 2em;
+	}
 }
+
+
+
