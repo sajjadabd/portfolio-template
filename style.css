@@ -23,6 +23,8 @@ body {
                           'footer footer';
     box-sizing: border-box;
     position : relative;
+	background : url(./img/fancy_deboss.png) repeat;
+	background-position : top left;
 }
 
 
