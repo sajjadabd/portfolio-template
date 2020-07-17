@@ -5,7 +5,7 @@ $(document).ready(function(){
     // Typed.Js 
 
     var options = {
-        strings: ['','^500 Software ^500 Engineer', '^500 Web ^500 Developer' , '^500 Game ^500 Maker' , '^500 Computer ^500 Teacher'],
+        strings: ['','^500 Software ^500 Engineer', '^500 Web ^500 Developer' , '^500 Game ^500 Maker' , '^500 App ^500 Creator'],
         typeSpeed: 150,
         backSpeed: 50,
         backDelay: 50,
@@ -158,16 +158,50 @@ $(document).ready(function(){
 	
 	
 	
-	
-	
-	
+	// ------------------------------ Set Skill Bars Percentage
+
 
     $("div.percent").each( function () {
         $(this).css("width", $(this).attr('per') + '%' );
-    });
+	});
 	
+
+	//------------------------------------------------------------------
 	
+
+	experiences = [
+		{ name : "nekabeauty.com" , img : './img/nekabeauty.jpg' ,
+		comment : `nekabeauty is an online cosmetics retail shop written in PHP with self made framework 
+		with MySQL in back-end , works perfectly with AJAX requests and JSON` },
+		{ name : "Chatbox" , img : './img/chatbox.jpg' ,
+		comment : `Chatbox is an online Messaging App Written in Node.Js with Express Framework works perfectly sending and recieving messages across the internet`},
+		{ name : "ChessPlus" , img : './img/chess.jpg' , 
+		comment : `ChessPlus is an online Chess Game Written in Node.Js with Express Framework react as fast as possible to the changes in the game ` },
+		{ name : `Hokm Card Game` , img : './img/cards.jpg' , 
+		comment : `Hokm is an online iranian card game which is written in Node.Js and present the best experience to the user for playing a card game`}
+	];
+
+	let listOfExperiences = ``;
 	
+	experiences.map( (value) => {
+		listOfExperiences += `
+		<div class="item">
+			<div class="image">
+				<img src="${value.img}" alt="${value.name}">
+			</div>
+			<div class="title">
+				Created <code>${value.name}</code> 
+			</div>
+			<div class="comment">
+				${value.comment}
+			</div>
+		</div>
+		`;
+	});
+	
+
+	$("#myExperiences").append(listOfExperiences);
+
 	//------------------------------------------------------------
 	
 	// let body = document.body,

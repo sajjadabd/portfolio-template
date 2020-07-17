@@ -229,7 +229,7 @@ div.barContainer div.percentContainer {
     font-size : 1.5em;
 }
 
-#About code {
+code {
     background-color : red;
     color : white;
     border-radius: 10px;
@@ -261,6 +261,51 @@ div.barContainer div.percentContainer {
     padding : 0.5em;
     background-color: crimson;
 }
+
+
+
+
+
+#Experience div.context {
+    border-left : 5px dashed gray;
+
+}
+
+
+
+#Experience div.context div.item {
+    margin : 1em;
+    margin-top : 0;
+    padding : 1em;
+    background-color : white;
+    font-size : 2em;
+    position : relative;
+    --picSize : 50px;
+}
+
+#Experience div.context div.item div.image {
+    content: '';
+    position : absolute;
+    margin-top : 1em;
+    left : -2em;
+    top : 0;
+    width : var(--picSize);
+    height : var(--picSize);
+    user-select: none;
+}
+
+#Experience div.context div.item div.image img {
+    width : var(--picSize);
+    height : var(--picSize);
+    border-radius : 50%;
+} 
+
+
+#Experience div.context div.item div.comment {
+    margin-top : 1em;
+    font-size : 0.7em;
+}
+
 
 #Contact div.context {
     margin-top : 1em;
@@ -326,7 +371,38 @@ footer div {
 	
 	#Skills div.mySkills {
 		font-size : 2em;
-	}
+    }
+    
+    #Experience div.context {
+        border : none;
+    }
+
+    #Experience div.context div.item  {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-areas: 'image title'
+                             'body body';
+    }
+
+    #Experience div.context div.item div.image { 
+        position : relative;
+        padding : 0;
+        margin : 0;
+        left : 0;
+        grid-area : image;
+    }
+
+    #Experience div.context div.item div.title {
+        grid-area : title;
+        align-self: center;
+        font-size : 0.6em;
+    }
+
+    #Experience div.context div.item div.comment {
+        grid-area : body;
+        font-size : 0.6em;
+    }
+
 }
 
 
