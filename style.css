@@ -34,6 +34,55 @@ body {
 }
 
 
+div.fixMenu {
+    position : fixed;
+    display : none;
+    top : 50%;
+    right : 0;
+    z-index: 3;
+}
+
+
+div.fixMenu ul {
+    list-style-type: none;
+    margin : 0;
+    padding : 0;
+    --width : 25vw;
+}
+
+div.fixMenu ul li {
+    position : relative;
+    right : calc(-0.7 * var(--width));
+    text-align : left;
+    background : navy;
+    font-size : 0.8em;
+    width : var(--width);
+    box-sizing : border-box;
+    transition : 0.4s;
+}
+
+
+
+div.fixMenu ul li:nth-child(odd) {
+    background-color: darkred;
+}
+
+div.fixMenu ul li:hover {
+    right : 0;
+}
+
+
+div.fixMenu ul li.active {
+	right : 0;
+}
+
+div.fixMenu ul li a {
+    text-decoration: none;
+    padding : 0.5em 1em;
+    color : white;
+    display : block;
+}
+
 
 /* nav {
     width : 100%;
@@ -243,7 +292,7 @@ code {
     background-color : red;
     color : white;
     border-radius: 10px;
-    padding : 1px 4px;
+    padding : 0.2em;
     font-family: UbuntuBold;
 }
 
@@ -365,7 +414,7 @@ code {
     left : -4.5em;
     top : 0;
     position : absolute;
-    
+	user-select : none;
 }
 
 #Educations div.context div.item div.image img {
@@ -442,6 +491,11 @@ footer div {
         font-size : 0.8em;
     }
 	
+	
+	#About div.context {
+		font-size : 1.4em;
+	}
+	
 	#Skills div.mySkills {
 		font-size : 2em;
     }
@@ -494,7 +548,9 @@ footer div {
         left : 0;
     }
 
-    
+    #Contact div.context div.item {
+        padding-bottom : 1em;
+    }
 
     #Contact div.context div.item div.data {
         font-size : 1em;
@@ -503,11 +559,25 @@ footer div {
     #Contact div.context div.item div.icon {
         font-size : 1.1em;
     }
+
+
+    div.fixMenu {
+        display : block;
+    }
+
+    div.fixMenu ul {
+        --width : 15vw;
+    }
 }
 
 
 
 @media only screen and (max-width : 500px) {
+
+    div.aside {
+        padding : 0em 0em 3em 0em;
+    }
+
     div.menu ul { 
         flex-direction : column;
     }
@@ -525,11 +595,35 @@ footer div {
         height : 5px;
     }
 	
+	#About div.context {
+		font-size : 1.2em;
+	}
+	
 		
 	#Skills div.mySkills {
 		font-size : 2em;
     }
 
+    #Experience div.context div.item div.title {
+        font-size : 0.4em;
+    }
+
+    #Experience div.context div.item div.comment {
+        font-size : 0.4em;
+    }
+
+    #Educations div.context div.item {
+        display : grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas : 'major major major'
+                              'image uni uni'
+                              'date date date';
+    }
+
+
+    #Educations div.context div.item div.major {
+        font-size : 0.6em;
+    }
 
     #Educations div.context div.item div.uni {
         font-size : 0.6em;
@@ -546,6 +640,10 @@ footer div {
 
     #Contact div.context div.item div.icon {
         font-size : 1em;
+    }
+
+    div.fixMenu ul {
+        --width : 25vw;
     }
 }
 

@@ -27,9 +27,11 @@ $(document).ready(function(){
         //console.log(el.id);
         //$(`ul li a`).removeClass('active');
         $(`a[href='#${el.id}']`).addClass('active');
+		$(`li a[href='#${el.id}']`).parent().addClass('active');
     })
     .on('exit', (el) => {
         $(`a[href='#${el.id}']`).removeClass('active');
+		$(`li a[href='#${el.id}']`).parent().removeClass('active');
     });
 
     // -----------------------------------------
