@@ -167,6 +167,42 @@ $(document).ready(function(){
 	
 
 	//------------------------------------------------------------------
+
+	let listOfMyEducations = ``;
+
+	myEducations = [
+		{ major : 'Mathematics' , img : './img/shahed.jpg' ,
+		 uni : 'Shahed High School' , date : '2007-2010' } ,
+		{ major : 'Software Engineering' , img : './img/umz.jpg' ,
+		 uni : 'University Of Mazandaran' , date : '2010-2013' } ,
+		{ major : 'Software Engineering' , img : './img/azad.jpg' ,
+		 uni : 'Azad University Of Neka' , date : '2017-2020' } ,
+	];
+
+
+	myEducations.map( (value) => {
+		listOfMyEducations += `
+		<div class="item">
+			<div class="major"><span class="badge">${value.major}</span></div>
+			<div class="image">
+				<img src="${value.img}" alt="${value.uni}">
+			</div>
+			<div class="uni">${value.uni}</div>
+			<div class="date">${value.date}</div>
+		</div>
+		`;
+	});
+
+
+
+	$("#myEducations").append(listOfMyEducations);
+
+
+
+
+
+
+	//-------------------------------------------
 	
 
 	experiences = [
