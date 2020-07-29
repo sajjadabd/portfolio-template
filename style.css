@@ -8,6 +8,11 @@
 }
 
 @font-face {
+    font-family : UbuntuRegular;
+    src : url(./fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+@font-face {
     font-family : Roboto;
     src : url(./fonts/Roboto/Roboto-Thin.ttf);
 }
@@ -94,7 +99,7 @@ div.fixMenu ul li a {
 
 aside {
     /* border : 3px solid red; */
-    height : 795vh;
+    height : 905vh;
     /* border-right : 5px solid black; */
 }
 
@@ -218,10 +223,11 @@ div.part:last-child {
 
 
 div.titr {
-    padding : 1em;
+    padding : 1em 1em 0.3em 0.3em;
     font-size : 3em;
     border-bottom : 5px solid red;
     margin-bottom: 1em;
+    font-family : UbuntuBold;
 }
 
 
@@ -230,6 +236,7 @@ div.context {
     width : calc(100% - 40px);
     height : 40%;
     margin : 0 auto;
+    font-family : UbuntuRegular;
 }
 
 
@@ -251,7 +258,33 @@ a:hover {
 /* selected link */
 a:active {
     color: black;
-} 
+}
+
+
+/* unvisited link */
+code a:link {
+    color: white;
+    text-decoration: none;
+}
+
+/* visited link */
+code a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/* mouse over link */
+code a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* selected link */
+code a:active {
+    color: white;
+    text-decoration: none;
+}
+
 
 
 
@@ -317,8 +350,9 @@ code {
 
 #Skills div.subtitr {
 	font-size : 1.4em;
-    padding : 0.5em;
-    background-color: crimson;
+  padding : 0.5em;
+  background-color: crimson;
+  font-family : UbuntuBold;
 }
 
 
@@ -356,12 +390,40 @@ code {
     width : var(--picSize);
     height : var(--picSize);
     border-radius : 50%;
-} 
+}
 
 
 #Experience div.context div.item div.comment {
     margin-top : 1em;
     font-size : 0.7em;
+    font-family : UbuntuRegular;
+}
+
+
+#Experience div.context div.item ul li {
+    margin-bottom : 0.3em;
+}
+
+
+#Experience div.context div.item div.titles {
+    margin-top : 1em;
+    font-size : 0.7em;
+    font-family : UbuntuRegular;
+    grid-area : titles;
+}
+
+#Experience div.context div.item div.technologies {
+    margin-top : 1em;
+    font-size : 0.7em;
+    font-family : UbuntuRegular;
+    grid-area : tech;
+}
+
+#Experience div.context div.item div.achievements {
+    margin-top : 1em;
+    font-size : 0.7em;
+    font-family : UbuntuRegular;
+    grid-area : ache;
 }
 
 
@@ -477,7 +539,7 @@ footer div {
     }
 
 
-    div.menu ul { 
+    div.menu ul {
         flex-direction : row;
         flex-wrap : wrap;
         justify-content: center;
@@ -490,16 +552,16 @@ footer div {
     div.context div {
         font-size : 0.8em;
     }
-	
-	
+
+
 	#About div.context {
 		font-size : 1.4em;
 	}
-	
+
 	#Skills div.mySkills {
 		font-size : 2em;
     }
-    
+
     #Experience div.context {
         border : none;
     }
@@ -508,10 +570,13 @@ footer div {
         display: grid;
         grid-template-columns: 1fr 5fr;
         grid-template-areas: 'image title'
-                             'body body';
+                             'body body'
+                             'titles titles'
+                             'tech tech'
+                             'ache ache';
     }
 
-    #Experience div.context div.item div.image { 
+    #Experience div.context div.item div.image {
         position : relative;
         padding : 0;
         margin : 0;
@@ -542,7 +607,7 @@ footer div {
     }
 
 
-    #Educations div.context div.item div.image { 
+    #Educations div.context div.item div.image {
         grid-area : image;
         position : relative;
         left : 0;
@@ -578,7 +643,7 @@ footer div {
         padding : 0em 0em 3em 0em;
     }
 
-    div.menu ul { 
+    div.menu ul {
         flex-direction : column;
     }
 
@@ -594,12 +659,12 @@ footer div {
     div.skill div.bar,div.skill div.bar div.percent {
         height : 5px;
     }
-	
+
 	#About div.context {
 		font-size : 1.2em;
 	}
-	
-		
+
+
 	#Skills div.mySkills {
 		font-size : 2em;
     }
@@ -632,7 +697,7 @@ footer div {
     #Educations div.context div.item div.date {
         font-size : 0.6em;
     }
-    
+
 
     #Contact div.context div.item div.data {
         font-size : 0.8em;
@@ -646,6 +711,3 @@ footer div {
         --width : 25vw;
     }
 }
-
-
-
