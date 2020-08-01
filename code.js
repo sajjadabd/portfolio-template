@@ -274,7 +274,7 @@ $(document).ready(function(){
         'Flexbox and CSS Grid for front-end Design'
       ],
       achievements : [
-
+        'personal chats',
       ],
     },
 		{
@@ -301,8 +301,9 @@ $(document).ready(function(){
       name : `Hokm Card Game` ,
       href : "https://hokmcardgame.herokuapp.com",
       img : './img/cards.jpg' ,
-		  comment : `Hokm is an online iranian card game which is written in
-                 Node.Js and present the best experience to the user for
+		  comment : `Hokm is an online iranian card game written in
+                 Modern Javascript using Latest CSS Technologies
+                 and present the best experience to the user for
                  playing a card game`,
       subtitles : [
 
