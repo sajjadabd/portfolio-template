@@ -47,7 +47,7 @@ $(document).ready(function(){
 	{ name : "HTML" , per : 90 },
 	{ name : "CSS" , per : 80 },
 	{ name : "Js" , per : 85 },
-	{ name : "Sass" , per : 70 },
+	{ name : "Sass" , per : 50 },
 	{ name : "React.Js" , per : 80 },
 	{ name : "Angular" , per : 60 },
 	];
@@ -73,9 +73,9 @@ $(document).ready(function(){
 
 	backend = [
 	{ name : "PHP" , per : 80 },
-	{ name : "Laravel" , per : 80 },
+	{ name : "Laravel" , per : 50 },
 	{ name : "Node.Js" , per : 70 },
-	{ name : "Django" , per : 60 },
+	{ name : "Django" , per : 50 },
 	];
 
 
@@ -102,7 +102,7 @@ $(document).ready(function(){
   database = [
 	{ name : "SQL" , per : 90 },
 	{ name : "Sqlite" , per : 90 },
-	{ name : "MongoDb" , per : 90 },
+	{ name : "MongoDb" , per : 70 },
 	];
 
 
@@ -130,11 +130,11 @@ $(document).ready(function(){
 
 	programming = [
 	{ name : "C" , per : 70 },
-	{ name : "C++" , per : 80 },
+	{ name : "C++" , per : 90 },
 	{ name : "C#" , per : 80 },
 	{ name : "Java" , per : 90 },
 	{ name : "Python" , per : 90 },
-	{ name : "Dart" , per : 90 },
+	{ name : "Dart" , per : 60 },
 	];
 
 
@@ -164,8 +164,8 @@ $(document).ready(function(){
 
 	mobile = [
 	{ name : "React Native" , per : 70 },
-	{ name : "Ionics" , per : 80 },
-	{ name : "Flutter" , per : 80 },
+	{ name : "Ionics" , per : 50 },
+	{ name : "Flutter" , per : 60 },
 	];
 
 
@@ -259,25 +259,6 @@ $(document).ready(function(){
       ],
     },
 		{
-      name : "Chatbox" ,
-      href : "https://masterchatbox.herokuapp.com",
-      img : './img/chatbox.jpg' ,
-		  comment : `Chatbox is an online Messaging App Written in Node.Js
-                 with Express Framework works perfectly sending and recieving
-                 messages across the internet`,
-      subtitles : [
-        'providing messaging system for a large infrastructure'
-      ],
-      technologies : [
-        'Node.js for back-end developement',
-        'Socket.io for transferring messages',
-        'Flexbox and CSS Grid for front-end Design'
-      ],
-      achievements : [
-        'personal chats',
-      ],
-    },
-		{
       name : "ChessPlus" ,
       href : "https://chessplus.herokuapp.com",
       img : './img/chess.jpg' ,
@@ -295,6 +276,25 @@ $(document).ready(function(){
       ],
       achievements : [
         'suggestion for chess pieces to go in the board'
+      ],
+    },
+	{
+      name : "Chatbox" ,
+      href : "https://masterchatbox.herokuapp.com",
+      img : './img/chatbox.jpg' ,
+		  comment : `Chatbox is an online Messaging App Written in Node.Js
+                 with Express Framework works perfectly sending and recieving
+                 messages across the internet`,
+      subtitles : [
+        'providing messaging system for a large infrastructure'
+      ],
+      technologies : [
+        'Node.js for back-end developement',
+        'Socket.io for transferring messages',
+        'Flexbox and CSS Grid for front-end Design'
+      ],
+      achievements : [
+        'personal chats',
       ],
     },
 		{
